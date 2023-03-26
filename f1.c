@@ -19,7 +19,8 @@ DFTvoid dft(short *x, short *real, short *imag) {
 for (int k = 0; k < N; k++) {    
 real[k] = imag[k] = 0; 
    for (int n = 0; n < N; n++) {      
-real[k] += x[n] * cos(2*M_PI*k*n/N);      imag[k] -= x[n] * sin(2*M_PI*k*n/N);    
+real[k] += x[n] * cos(2*M_PI*k*n/N);  
+ imag[k] -= x[n] * sin(2*M_PI*k*n/N);    
 }  
 }}
 

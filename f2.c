@@ -41,7 +41,9 @@ DFTvoid idft(short *real, short *imag, short *x) {
 int main() { 
  dft(x, real, imag); 
  idft(real, imag, x); 
- for (int i = 0; i < N; i++) {    printf("%d\n", x[i]);  } 
+ for (int i = 0; i < N; i++) {  
+  printf("%d\n", x[i]); 
+ } 
  return 0;
 }
 

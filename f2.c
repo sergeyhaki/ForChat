@@ -24,7 +24,9 @@ DFTvoid dft(short *x, short *real, short *imag) {
      imag[k] -= x[n] * sin(2*M_PI*k*n/N);   
  } 
  }
-}// Реализация обратного 
+}
+
+// Реализация обратного 
 
 DFTvoid idft(short *real, short *imag, short *x) { 
  for (int n = 0; n < N; n++) {  

@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
 #define N 16 // длина входной последовательности
 
 short x[N] = { // входная последовательность  32767, 32767, 32767, 32767,  0,     0,     0,     0,    -32767,-32767,-32767,-32767,  0,     0,     0,     0};
@@ -12,9 +11,8 @@ short real[N];  // действительная часть спектра
 
 short imag[N];  // мнимая часть спектра
 
-// Реализация прямого 
-
-DFTvoid dft(short *x, short *real, short *imag) {
+// Реализация прямого DFT
+void dft(short *x, short *real, short *imag) {
   for (int k = 0; k < N; k++) {  
   real[k] = imag[k] = 0;  
   for (int n = 0; n < N; n++) {   
@@ -24,9 +22,8 @@ DFTvoid dft(short *x, short *real, short *imag) {
  }
 }
 
-// Реализация обратного 
-
-DFTvoid idft(short *real, short *imag, short *x) { 
+// Реализация обратного DFT
+void idft(short *real, short *imag, short *x) { 
  for (int n = 0; n < N; n++) {  
   x[n] = 0;  
   for (int k = 0; k < N; k++) {  

@@ -18,7 +18,10 @@ void ifft(int n, int x_real[], int x_imag[], int X_real[], int X_imag[])
 
 for (int i = 0; i < n/2; i++)
  {      
-  x_even_real[i] = x_real[2*i];        x_even_imag[i] = x_imag[2*i];        x_odd_real[i] = x_real[2*i+1];        x_odd_imag[i] = x_imag[2*i+1];  
+       x_even_real[i] = x_real[2*i]; 
+       x_even_imag[i] = x_imag[2*i]; 
+       x_odd_real[i] = x_real[2*i+1]; 
+       x_odd_imag[i] = x_imag[2*i+1];  
   }     
 
    ifft(n/2, x_even_real, x_even_imag, X_even_real, X_even_imag);  

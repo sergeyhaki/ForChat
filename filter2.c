@@ -12,6 +12,8 @@ void inverse_fft(vector<complex<double>>& a) {
         a1[i] = a[2*i+1];
     }
 
+    //test
+
     inverse_fft(a0);
     inverse_fft(a1);
 
